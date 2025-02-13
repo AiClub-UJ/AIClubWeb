@@ -11,6 +11,20 @@
     --card-bg: rgba(255, 255, 255, 0.98);
     --gradient: linear-gradient(135deg, #27bcb6 0%, #213260 100%);
 }
+:root {
+    --primary: #121419;
+    --secondary: #1a1f2c;
+    --accent: #27bccb;
+    --accent2: #213260;
+    --light: #f4f4f4;
+    --text-gradient: linear-gradient(45deg, #27bccb, #1d5694);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+    
+
+    
+}
 
 
 .navbar {
@@ -578,5 +592,302 @@ body {
     .contenido-card a {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
+    }
+}
+
+
+
+.footer {
+    position: relative;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: var(--light);
+    padding: 100px 0 40px;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(0, 242, 254, 0.1) 0%, transparent 25%),
+        radial-gradient(circle at 80% 80%, rgba(0, 145, 255, 0.1) 0%, transparent 25%);
+    pointer-events: none;
+}
+
+.footer-waves {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.footer-waves svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+}
+
+.footer-waves .shape-fill {
+    fill: var(--primary);
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-section {
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--light);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--text-gradient);
+    border-radius: 2px;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-info li i {
+    color: var(--accent);
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+.quick-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links li {
+    margin-bottom: 0.8rem;
+}
+
+.quick-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-right: 1.2rem;
+}
+
+.quick-links a::before {
+    content: '\f054';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: var(--accent);
+    transition: all 0.3s ease;
+}
+
+.quick-links a:hover {
+    color: var(--accent);
+    padding-right: 1.5rem;
+}
+
+
+.contact-email {
+    margin-top: 1.5rem;
+}
+
+.contact-email .input-group {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+}
+
+.contact-email input {
+    background: transparent;
+    border: none;
+    padding: 0.8rem 1rem;
+    color: var(--light);
+    font-size: 1rem;
+    flex: 1;
+    cursor: pointer;
+}
+
+.contact-email input:focus {
+    box-shadow: none;
+    background: transparent;
+    color: var(--light);
+    outline: none;
+}
+
+.contact-email .email-link {
+    text-decoration: none;
+    width: 100%;
+}
+
+.contact-btn {
+    background: var(--text-gradient);
+    border: none;
+    color: var(--light);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+}
+
+/* [Rest of the styles remain the same] */
+
+@media (max-width: 992px) {
+    .footer {
+        padding: 80px 0 30px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .contact-email .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-email input {
+        text-align: center;
+    }
+
+    .contact-btn {
+        width: 100%;
+    }
+}
+
+
+.subscribe-btn {
+    background: var(--text-gradient);
+    border: none;
+    color: var(--light);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    color: var(--light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-link:hover {
+    background: var(--text-gradient);
+    transform: translateY(-3px);
+    color: var(--light);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 992px) {
+    .footer {
+        padding: 80px 0 30px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section h3::after {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .contact-info li {
+        justify-content: center;
+    }
+
+    .quick-links a {
+        padding-right: 0;
+    }
+
+    .quick-links a::before {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-waves svg {
+        height: 40px;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+
+    .social-link {
+        width: 35px;
+        height: 35px;
     }
 }
