@@ -1,3 +1,16 @@
+:root {
+    --primary: #f4f4f4;
+    --secondary: #1a1f2c;
+    --accent: #27bccb;
+    --accent2: #213260;
+    --light: #f4f4f4;
+    --text-gradient: linear-gradient(45deg, #27bccb, #99a5c9);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+    
+
+}
 
 
 
